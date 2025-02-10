@@ -6,20 +6,20 @@
     <title>Book an Appointment</title>
     <style>
         body {
-        font-family: Arial, sans-serif;
-        background: url('dentist2.jpg') no-repeat center center fixed;
-        background-size: cover;
-        text-align: center;
-        margin: 0;
-        padding: 0;
+            font-family: Arial, sans-serif;
+            background: url('dentist.gif') no-repeat center center fixed;
+            background-size: cover;
+            text-align: center;
+            margin: 0;
+            padding: 0;
         }
         .appointment-container {
-        width: 400px;
-        padding: 30px;
-        background: rgba(255, 255, 255, 0); 
-        margin: 150px auto;
-        border-radius: 10px;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0);
+            width: 400px;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0);
+            margin: 150px auto;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0);
         }
         
         h2 {
@@ -37,7 +37,7 @@
         button {
             width: 100%;
             padding: 15px;
-            background-color: blue;
+            background-color: grey;
             color: white;
             border: none;
             border-radius: 8px;
@@ -47,6 +47,21 @@
         }
         button:hover {
             background-color: blue;
+        }
+        a {
+            display: block;
+            width: 93%;
+            padding: 15px;
+            background-color: grey;
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        a:hover {
+            background-color: red;
         }
     </style>
 </head>
@@ -66,8 +81,8 @@
             <option value="Extraction">Tooth Extraction</option>
         </select>
         <button onclick="submitAppointment()">Submit Appointment</button>
-        <p id="confirmation-message" style="display: none; color: green; font-weight: bold; margin-top: 10px;">Appointed Successfully!</p>
-        <button onclick="goBack()" style="margin-top: 10px; background-color: #dc3545;">Back to Login</button>
+        <h3><p id="confirmation-message" style="display: none; color: black; font-weight: bold; margin-top: 10px;">Appointed Successfully!</p></h3>
+        <a href="index.html">Back to Login</a>
     </div>
 
     <script>
@@ -76,9 +91,6 @@
             setTimeout(function() {
                 location.reload();
             }, 2000);
-        }
-        function goBack() {
-            window.location.href = "login.html";
         }
     </script>
 </body>
