@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dental Clinic Login</title>
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    background: url('de.jpg') no-repeat center center fixed;
+    background-size: cover;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+.login-container, .appointment-container {
+    width: 400px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0); 
+    margin: 150px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0);
+}
+h2 {
+    color: yellow;
+    margin-bottom: 20px;
+}
+input, select {
+    width: 100%;
+    padding: 15px;
+    margin: 15px 0;
+    border: 1px solid whitesmoke;
+    border-radius: 8px;
+    font-size: 16px;
+}
+button {
+    width: 100%;
+    padding: 15px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+}
+button:hover {
+    background-color: blue;
+}
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>KYLE'S DENTAL CLINIC</h2>
+        <p>Please login to book an appointment</p>
+        <label for="username">Username:</label>
+        <input type="text" id="username" placeholder="Enter Username" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" placeholder="Enter Password" required>
+        <button onclick="login()">Login</button>
+    </div>
+
+    <script>
+        function login() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            if (username === "admin" && password === "admin123") {
+                window.location.href = "appointment.html";
+            } else {
+                alert("Invalid credentials, please try again.");
+            }
+        }
+    </script>
+</body>
+</html>
